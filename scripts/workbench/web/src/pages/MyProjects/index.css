@@ -1,0 +1,38 @@
+.my-project-setup {
+  width: min(100%, 820px);
+  margin-inline: auto;
+}
+
+.my-project-setup-intro {
+  width: 100%;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.my-project-setup-intro .ant-typography {
+  margin: 0;
+}
+
+.my-project-setup-icon {
+  margin-bottom: 8px;
+  color: var(--ant-color-primary);
+  font-size: 32px;
+}
+
+.my-project-setup-section {
+  max-width: 560px;
+  margin-inline: auto;
+}
+
+.my-project-setup-section > .ant-typography {
+  margin-bottom: 4px;
+}
+
+.my-project-setup-note {
+  margin: 12px 0 20px;
+}
+
+.my-project-setup .my-project-setup-footer {
+  margin: 28px 0 0;
+  text-align: center;
+}

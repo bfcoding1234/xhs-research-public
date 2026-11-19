@@ -1,0 +1,227 @@
+.formShell {
+  width: min(100%, 1040px);
+  min-width: 0;
+  margin-inline: auto;
+}
+
+.formShell :global(.ant-card-body),
+.formShell :global(.ant-pro-steps-form-container),
+.formShell :global(.ant-pro-steps-form-step),
+.formShell :global(.ant-pro-form),
+.formShell :global(form) {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.stepContent {
+  width: 100%;
+  max-width: 820px;
+  min-width: 0;
+  min-height: 360px;
+  margin-inline: auto;
+  padding-block: 16px 8px;
+}
+
+.modeGuide {
+  margin-top: -8px;
+  margin-bottom: 24px;
+}
+
+.fieldGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 16px;
+}
+
+.sectionStack {
+  display: grid;
+  gap: 16px;
+}
+
+.sectionCard :global(.ant-card-head-title) {
+  white-space: normal;
+}
+
+.sectionExtra {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.countTag {
+  margin-inline-end: 0;
+  font-variant-numeric: tabular-nums;
+}
+
+.collectionScopes {
+  display: grid;
+  gap: 12px;
+}
+
+.collectionScopeGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.collectionScope,
+.authorSource {
+  min-width: 0;
+  padding: 16px;
+  border: 1px solid var(--ant-color-border-secondary);
+  border-radius: var(--ant-border-radius);
+  background: var(--ant-color-fill-quaternary);
+}
+
+.collectionScope :global(.ant-form-item:last-child),
+.authorSource :global(.ant-form-item:last-child) {
+  margin-bottom: 0;
+}
+
+.authorSource {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.resolvedProfiles {
+  display: grid;
+  gap: 4px;
+}
+
+.resolvedProfileLinks {
+  display: grid;
+  gap: 4px;
+  overflow-wrap: anywhere;
+}
+
+.authorPicker {
+  margin-top: 0;
+}
+
+.authorPickerHeading,
+.authorPickerControls,
+.candidateHeading,
+.candidateMetrics {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.authorPickerHeading {
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.authorPickerCopy {
+  max-width: 600px;
+}
+
+.authorPickerControls {
+  margin-bottom: 12px;
+}
+
+.candidateList {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  max-height: 336px;
+  overflow: auto;
+  padding: 2px;
+}
+
+.candidateCard {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 10px;
+  align-items: flex-start;
+  padding: 12px;
+  border: 1px solid var(--ant-color-border-secondary);
+  border-radius: var(--ant-border-radius);
+  background: var(--ant-color-bg-container);
+  transition:
+    border-color 0.2s,
+    background-color 0.2s;
+}
+
+.candidateCard:hover {
+  border-color: var(--ant-color-primary-border);
+  background: var(--ant-color-primary-bg);
+}
+
+.candidateHeading {
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.candidateMetrics :global(.ant-tag) {
+  margin-inline-end: 0;
+  font-size: 12px;
+}
+
+.candidateScore {
+  color: var(--ant-color-text-tertiary);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.emptyCandidates {
+  grid-column: 1 / -1;
+  padding-block: 20px;
+}
+
+.summarySources {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.summarySources :global(.ant-tag) {
+  margin-inline-end: 0;
+}
+
+.summaryNotice {
+  margin-bottom: 16px;
+}
+
+.submitError {
+  margin-top: 16px;
+}
+
+.modalIdentity {
+  margin-bottom: 16px;
+}
+
+@media (max-width: 760px) {
+  .formShell :global(.ant-card-body) {
+    padding-inline: 12px;
+  }
+
+  .formShell :global(.ant-radio-group) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .stepContent {
+    min-height: 0;
+    padding-top: 8px;
+  }
+
+  .fieldGrid,
+  .candidateList,
+  .collectionScopeGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .candidateCard {
+    transition: none;
+  }
+}

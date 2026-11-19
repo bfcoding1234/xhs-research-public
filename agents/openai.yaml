@@ -1,0 +1,7 @@
+interface:
+  display_name: "小红书个人工作台"
+  short_description: "用可配置采集 CLI 调研作者、关键词或综合主题，并由 Codex 辅助分析"
+  brand_color: "#176B5B"
+  default_prompt: "使用 $xhs-research 按可配置的业务原子能力路由调用 Socai、xiaohongshu-cli、OpenCLI 等采集指令，调研一个小红书作者、按关键词发现用户、搜索帖子或完成综合主题调研，并在本地工作台展示进度和报告。"
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,55 @@
+{
+  "name": "xhs-research-workbench-ui",
+  "private": true,
+  "version": "1.0.0",
+  "description": "基于 Ant Design Pro v6 的小红书个人工作台",
+  "scripts": {
+    "dev": "cross-env UMI_ENV=dev max dev",
+    "build": "max build",
+    "preview": "max preview --port 8000",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "lint:biome": "biome lint src/app.tsx src/components src/features src/pages src/services src/utils config",
+    "lint:antd": "antd lint src --format json",
+    "lint": "npm run lint:biome && npm run typecheck"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^6.2.2",
+    "@ant-design/plots": "^2.6.8",
+    "@ant-design/pro-components": "^3.1.12-0",
+    "@ant-design/x-markdown": "^2.5.0",
+    "@tanstack/react-query": "^5.100.6",
+    "antd": "^6.5.0",
+    "antd-style": "^4.1.0",
+    "dayjs": "^1.11.20",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5"
+  },
+  "devDependencies": {
+    "@ant-design/cli": "^6.5.3",
+    "@biomejs/biome": "^2.4.13",
+    "@testing-library/dom": "^10.4.1",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
+    "@types/node": "^25.0.0",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@umijs/max": "^4.6.51",
+    "cross-env": "^10.1.0",
+    "happy-dom": "^20.10.1",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.8"
+  },
+  "overrides": {
+    "@umijs/plugins": {
+      "@ant-design/pro-components": "$@ant-design/pro-components"
+    }
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "browserslist": [
+    "defaults"
+  ]
+}

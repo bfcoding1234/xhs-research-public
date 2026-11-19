@@ -1,0 +1,206 @@
+.ant-pro-layout-content:has(.settings-page-layout) {
+  overflow: visible;
+}
+
+.settings-page-layout {
+  display: grid;
+  grid-template-columns: 224px minmax(0, 1fr);
+  gap: var(--xhs-space-6);
+  align-items: start;
+}
+
+.settings-page-nav {
+  position: sticky;
+  top: var(--xhs-space-4);
+  max-height: calc(100vh - var(--xhs-space-8));
+  overflow-y: auto;
+  scrollbar-gutter: stable;
+  background: var(--ant-color-bg-container);
+  border: 1px solid var(--ant-color-border-secondary);
+  border-radius: var(--ant-border-radius-lg);
+}
+
+.settings-page-nav .ant-menu.ant-menu-inline {
+  border-inline-end: 0;
+}
+
+.settings-page-nav .ant-menu-item-group-title {
+  padding-block: var(--xhs-space-3) var(--xhs-space-1);
+  color: var(--ant-color-text-secondary);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.settings-page-nav .ant-menu-item-group:not(:first-child) .ant-menu-item-group-title {
+  border-block-start: 1px solid var(--ant-color-border-secondary);
+}
+
+.settings-page-nav .ant-menu-item {
+  margin-block: 2px;
+}
+
+.settings-page-stack {
+  display: grid;
+  gap: var(--xhs-space-8);
+  min-width: 0;
+}
+
+.settings-page-group {
+  display: grid;
+  gap: var(--xhs-space-4);
+  min-width: 0;
+}
+
+.settings-page-group-heading {
+  display: flex;
+  gap: var(--xhs-space-3);
+  align-items: center;
+  padding-inline: var(--xhs-space-1);
+}
+
+.settings-page-group-heading .ant-typography {
+  margin: 0;
+}
+
+.settings-page-group-icon {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  color: var(--ant-color-primary);
+  font-size: 18px;
+  background: var(--ant-color-primary-bg);
+  border-radius: var(--ant-border-radius-lg);
+}
+
+.settings-page-group-stack {
+  display: grid;
+  gap: var(--xhs-space-4);
+  min-width: 0;
+}
+
+.settings-page-section {
+  scroll-margin-top: var(--xhs-space-6);
+}
+
+.settings-page-section .ant-card-head-title {
+  font-weight: 600;
+}
+
+.settings-page-section .ant-input-number,
+.settings-page-section .ant-select {
+  width: 100%;
+}
+
+.settings-page-section-note {
+  margin-block-end: var(--xhs-space-4);
+}
+
+.settings-prompt-editor,
+.settings-prompt-editor textarea {
+  font-family: var(--ant-font-family-code);
+  line-height: 1.65;
+}
+
+.settings-prompt-variables {
+  display: grid;
+  gap: var(--xhs-space-1);
+  margin-block-start: var(--xhs-space-1);
+}
+
+.settings-routing-list {
+  display: grid;
+  gap: var(--xhs-space-3);
+}
+
+.settings-routing-item {
+  padding: var(--xhs-space-4);
+  background: var(--ant-color-fill-quaternary);
+  border: 1px solid var(--ant-color-border-secondary);
+  border-radius: var(--ant-border-radius-lg);
+}
+
+.settings-routing-heading {
+  display: flex;
+  gap: var(--xhs-space-4);
+  align-items: start;
+  justify-content: space-between;
+  margin-block-end: var(--xhs-space-3);
+}
+
+.settings-routing-heading .ant-typography {
+  margin-block-end: 0;
+}
+
+.settings-routing-command {
+  display: block;
+  margin-block-start: var(--xhs-space-3);
+  overflow-wrap: anywhere;
+}
+
+.settings-routing-actions {
+  margin-block-start: var(--xhs-space-4);
+}
+
+.settings-page-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 var(--xhs-space-4);
+}
+
+.settings-page-form-grid-three {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.settings-page-form-grid-four {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.settings-page-stat-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--xhs-space-4);
+  padding: var(--xhs-space-4);
+  background: var(--ant-color-fill-quaternary);
+  border-radius: var(--ant-border-radius-lg);
+}
+
+.settings-page-storage-detail {
+  margin-block-start: var(--xhs-space-6);
+}
+
+@media (max-width: 960px) {
+  .settings-page-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .settings-page-nav {
+    position: static;
+    max-height: none;
+    overflow: hidden;
+  }
+
+  .settings-page-nav .ant-menu {
+    display: block;
+  }
+
+  .settings-page-stat-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .settings-page-form-grid-four {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .settings-page-nav .ant-menu,
+  .settings-page-form-grid,
+  .settings-page-form-grid-three,
+  .settings-page-form-grid-four,
+  .settings-page-stat-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,325 @@
+.post-list-header {
+  display: flex;
+  min-height: 32px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  margin-bottom: 12px;
+}
+
+.post-coverage-info-trigger {
+  color: var(--ant-color-text-description);
+}
+
+.post-list-header-title {
+  flex: 1 1 auto;
+  font-size: 16px;
+}
+
+.post-list-header-tools {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+}
+
+.post-toolbar-query-content {
+  min-width: 0;
+}
+
+.post-toolbar-query-content .ant-space {
+  justify-content: flex-end;
+}
+
+.post-advanced-filters {
+  display: grid;
+  width: 280px;
+  gap: 16px;
+}
+
+.post-advanced-filter-field {
+  display: grid;
+  gap: 4px;
+}
+
+.post-advanced-filters .ant-select {
+  width: 100%;
+}
+
+.post-advanced-filter-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.post-list-table .ant-pro-table-list-toolbar-container {
+  gap: 12px;
+  padding-block: 12px;
+}
+
+.post-list-table .ant-pro-table-list-toolbar-left {
+  min-width: 0;
+  flex: 1 1 auto;
+}
+
+.post-list-table .ant-pro-table-list-toolbar-right {
+  flex: 0 0 auto;
+}
+
+.post-toolbar-actions {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.post-toolbar-actions::after {
+  width: 1px;
+  height: 20px;
+  margin-left: 4px;
+  background: var(--ant-color-border-secondary);
+  content: '';
+}
+
+.post-card-toolbar .post-toolbar-actions::after {
+  display: none;
+}
+
+.post-toolbar-selection-trigger {
+  display: inline-flex;
+  width: 108px;
+  flex: 0 0 108px;
+  gap: 4px;
+  align-items: center;
+  justify-content: center;
+  padding-inline: 8px;
+}
+
+.post-toolbar-selection {
+  display: inline-flex;
+  justify-content: center;
+  color: var(--ant-color-text-secondary);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.post-toolbar-selection strong {
+  min-width: 2ch;
+  color: var(--ant-color-primary);
+  text-align: center;
+}
+
+.post-toolbar-actions > .ant-btn:not(.post-toolbar-selection-trigger) {
+  min-width: 108px;
+}
+
+.post-card-view {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.post-card-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px 16px;
+  padding: 4px 0 12px;
+  border-bottom: 1px solid var(--ant-color-border-secondary);
+}
+
+.post-card-toolbar-main {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.post-card-control-group {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.post-card-control-label {
+  flex: none;
+  color: var(--ant-color-text-secondary);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.post-card-toolbar .ant-select {
+  width: 180px;
+}
+
+.post-card-grid .ant-list-item {
+  min-width: 0;
+  padding-block: 0;
+}
+
+.post-card {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.post-card .ant-card-cover {
+  overflow: hidden;
+  background: var(--ant-color-fill-tertiary);
+}
+
+.post-card-cover-button {
+  display: block;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.post-card-cover-button:focus-visible {
+  outline: 2px solid var(--ant-color-primary);
+  outline-offset: -2px;
+}
+
+.post-card .ant-card-cover .ant-image,
+.post-card .ant-card-cover .post-card-cover {
+  display: block;
+  width: 100%;
+}
+
+.post-card .ant-card-cover .post-card-cover {
+  height: 236px;
+}
+
+.post-card .ant-card-cover img {
+  display: block;
+  width: 100%;
+  height: 236px;
+  object-fit: cover;
+}
+
+.post-card .ant-card-head {
+  min-height: 56px;
+  padding-inline: 12px;
+}
+
+.post-card .ant-card-head-title {
+  min-width: 0;
+}
+
+.post-card .ant-card-body {
+  display: flex;
+  min-height: 172px;
+  flex-direction: column;
+}
+
+.post-card-title-row {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  gap: 4px;
+}
+
+.post-card-title {
+  min-width: 0;
+  padding: 0;
+  overflow: hidden;
+  text-align: left;
+  font-weight: 500;
+}
+
+.post-card-title .ant-typography {
+  display: block;
+  overflow: hidden;
+}
+
+.post-card-meta {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 12px;
+}
+
+.post-card-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  padding: 12px 0;
+  border-top: 1px solid var(--ant-color-border-secondary);
+  border-bottom: 1px solid var(--ant-color-border-secondary);
+}
+
+.post-card-stats > div {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.post-card-stats > div + div {
+  padding-left: 12px;
+  border-left: 1px solid var(--ant-color-border-secondary);
+}
+
+.post-card-actions {
+  margin-top: auto;
+  padding-top: 12px;
+}
+
+@media (max-width: 640px) {
+  .post-list-header-tools,
+  .post-toolbar-query-content {
+    width: 100%;
+  }
+
+  .post-list-header-tools {
+    align-items: stretch;
+    flex-direction: column;
+    margin-left: 0;
+  }
+
+  .post-toolbar-query-content .ant-space,
+  .post-toolbar-query-content .ant-input-search,
+  .post-toolbar-query-content .ant-select {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .post-list-table .ant-pro-table-list-toolbar-container {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .post-list-table .ant-pro-table-list-toolbar-left,
+  .post-list-table .ant-pro-table-list-toolbar-right {
+    width: 100%;
+  }
+
+  .post-card-toolbar {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .post-card-toolbar .ant-select {
+    width: 100%;
+  }
+
+  .post-card-control-group {
+    justify-content: space-between;
+  }
+
+  .post-card-grid .ant-row {
+    row-gap: 12px;
+  }
+
+  .post-card .ant-card-cover .post-card-cover,
+  .post-card .ant-card-cover img {
+    height: 180px;
+  }
+}

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img" aria-label="小红书个人工作台">
+  <rect width="48" height="48" rx="12" fill="#1677ff"/>
+  <path d="M13 15h22v4H13zm0 8h15v4H13zm0 8h10v4H13z" fill="#fff"/>
+  <circle cx="34" cy="32" r="7" fill="#ff4d4f" stroke="#fff" stroke-width="3"/>
+</svg>

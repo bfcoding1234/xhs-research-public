@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "xhs-research-workbench"
+version = "0.1.0"
+description = "基于可配置采集 CLI 的小红书作者、关键词与综合调研工作台"
+requires-python = ">=3.9"
+dependencies = [
+    "rapidocr>=3.8,<4",
+    "onnxruntime>=1.18",
+]
+
+[project.scripts]
+xhs-research = "xhs_research.cli:main"
+
+[tool.setuptools.package-data]
+xhs_research = ["schema.sql", "vision-schema.json", "vision-batch-schema.json", "report-chunk-schema.json", "report-presentation-schema.json", "keyword-generation-schema.json"]
+
+[tool.setuptools.packages.find]
+include = ["xhs_research*"]

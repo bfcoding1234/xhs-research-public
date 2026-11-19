@@ -1,0 +1,189 @@
+.projects-page {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 16px;
+  min-width: 0;
+}
+
+.projects-page > .ant-pro-table {
+  min-width: 0;
+}
+
+.projects-page__summary {
+  color: var(--ant-color-text-secondary);
+}
+
+.projects-page__summary strong {
+  color: var(--ant-color-text);
+  font-family: var(--xhs-mono);
+}
+
+.projects-page__name {
+  display: grid;
+  gap: 2px;
+  min-width: 0;
+}
+
+.projects-page__name-link {
+  width: fit-content;
+  max-width: 100%;
+  overflow: hidden;
+  color: var(--ant-color-primary);
+  font-weight: 600;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.projects-page__name-link:hover {
+  color: var(--ant-color-primary-hover);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.projects-page__name-link:focus-visible {
+  border-radius: var(--ant-border-radius-sm);
+  outline: 2px solid var(--ant-color-primary);
+  outline-offset: 2px;
+}
+
+.projects-page__description {
+  display: block;
+  max-width: 360px;
+}
+
+.projects-page__task-link {
+  display: grid;
+  min-width: 150px;
+  gap: 4px;
+  padding: 2px;
+  border-radius: var(--ant-border-radius-sm);
+  color: inherit;
+}
+
+.projects-page__task-status {
+  display: grid;
+  gap: 6px;
+}
+
+.projects-page__task-status-summary {
+  display: flex;
+  align-items: center;
+  gap: var(--xhs-space-2);
+  min-width: 0;
+  font-size: 12px;
+}
+
+.projects-page__task-status-summary .ant-tag {
+  flex: none;
+  margin-inline-end: 0;
+}
+
+.projects-page__active-tasks {
+  display: grid;
+  gap: 8px;
+}
+
+.projects-page__active-task {
+  padding-block: 2px;
+  border-bottom: 1px solid var(--ant-color-border-secondary);
+}
+
+.projects-page__active-task:last-child {
+  border-bottom: 0;
+}
+
+.projects-page__task-link:focus-visible {
+  outline: 2px solid var(--ant-color-primary);
+  outline-offset: 2px;
+}
+
+.projects-page__task-phase {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  min-width: 0;
+  color: var(--ant-color-text-secondary);
+  font-size: 12px;
+}
+
+.projects-page__task-phase > span:first-child {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.projects-page__task-phase > span:last-child {
+  flex: none;
+}
+
+.projects-page__task-link:hover .projects-page__task-phase {
+  color: var(--ant-color-primary);
+}
+
+.projects-page__count {
+  font-family: var(--xhs-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+.projects-page__refreshing {
+  color: var(--ant-color-text-tertiary);
+  font-size: 12px;
+}
+
+.projects-page__toolbar {
+  display: grid;
+  grid-template-columns: minmax(220px, 320px) 156px auto auto;
+  gap: var(--xhs-space-2);
+  align-items: center;
+  width: min(100%, 732px);
+  min-width: 0;
+}
+
+.projects-page__search,
+.projects-page__filter {
+  width: 100%;
+  min-width: 0;
+}
+
+.projects-page__refresh-action,
+.projects-page__create-action {
+  white-space: nowrap;
+}
+
+.projects-page .ant-pro-table-list-toolbar-container,
+.projects-page .ant-pro-table-list-toolbar-left,
+.projects-page .ant-pro-table-list-toolbar-right,
+.projects-page .ant-pro-table-list-toolbar-right > .ant-space {
+  min-width: 0;
+  max-width: 100%;
+}
+
+@media (max-width: 640px) {
+  .projects-page__description {
+    max-width: 240px;
+  }
+
+  .projects-page .ant-pro-table-list-toolbar-container {
+    display: grid;
+    gap: var(--xhs-space-3);
+  }
+
+  .projects-page .ant-pro-table-list-toolbar-right,
+  .projects-page .ant-pro-table-list-toolbar-right > .ant-space,
+  .projects-page .ant-pro-table-list-toolbar-right .ant-space-item {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .projects-page__toolbar {
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+  }
+
+  .projects-page__search {
+    grid-column: 1 / -1;
+  }
+}

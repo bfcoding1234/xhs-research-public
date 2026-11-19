@@ -1,0 +1,56 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.projectContext,
+.sourceOption,
+.resultHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.projectContext,
+.sourceOption {
+  padding: 12px;
+  border: 1px solid var(--ant-color-border-secondary);
+  border-radius: var(--ant-border-radius-lg);
+}
+
+.sourceKeywords {
+  padding-left: 24px;
+}
+
+.candidate {
+  width: 100%;
+}
+
+.candidateTitle,
+.resultActions,
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.candidateDescription {
+  margin-top: 4px;
+  padding-left: 24px;
+}
+
+.footer {
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.generating {
+  min-height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+

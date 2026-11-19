@@ -1,0 +1,74 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["title", "subtitle", "slides"],
+  "properties": {
+    "title": {"type": "string", "minLength": 1, "maxLength": 200},
+    "subtitle": {"type": "string", "maxLength": 300},
+    "slides": {
+      "type": "array",
+      "minItems": 6,
+      "maxItems": 16,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "type", "eyebrow", "title", "subtitle", "body",
+          "bullets", "metrics", "columns", "source_refs"
+        ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": ["title", "section", "bullets", "metrics", "comparison", "quote", "closing"]
+          },
+          "eyebrow": {"type": "string", "maxLength": 80},
+          "title": {"type": "string", "minLength": 1, "maxLength": 160},
+          "subtitle": {"type": "string", "maxLength": 240},
+          "body": {"type": "string", "maxLength": 800},
+          "bullets": {
+            "type": "array",
+            "maxItems": 6,
+            "items": {"type": "string", "maxLength": 220}
+          },
+          "metrics": {
+            "type": "array",
+            "maxItems": 4,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["value", "label", "context"],
+              "properties": {
+                "value": {"type": "string", "maxLength": 40},
+                "label": {"type": "string", "maxLength": 80},
+                "context": {"type": "string", "maxLength": 160}
+              }
+            }
+          },
+          "columns": {
+            "type": "array",
+            "maxItems": 2,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["title", "items"],
+              "properties": {
+                "title": {"type": "string", "maxLength": 80},
+                "items": {
+                  "type": "array",
+                  "maxItems": 5,
+                  "items": {"type": "string", "maxLength": 180}
+                }
+              }
+            }
+          },
+          "source_refs": {
+            "type": "array",
+            "maxItems": 6,
+            "items": {"type": "string", "maxLength": 80}
+          }
+        }
+      }
+    }
+  }
+}

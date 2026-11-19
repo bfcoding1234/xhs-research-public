@@ -1,0 +1,34 @@
+{
+  "type": "object",
+  "properties": {
+    "results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "post_id": {"type": "integer"},
+          "analysis": {
+            "type": "object",
+            "properties": {
+              "cover_hook": {"type": "string"},
+              "visual_style": {"type": "string"},
+              "layout": {"type": "string"},
+              "information_density": {"type": "string"},
+              "credibility_signals": {"type": "array", "items": {"type": "string"}},
+              "emotion": {"type": "string"},
+              "suitable_audience": {"type": "array", "items": {"type": "string"}},
+              "reusable_patterns": {"type": "array", "items": {"type": "string"}},
+              "problems": {"type": "array", "items": {"type": "string"}}
+            },
+            "required": ["cover_hook", "visual_style", "layout", "information_density", "credibility_signals", "emotion", "suitable_audience", "reusable_patterns", "problems"],
+            "additionalProperties": false
+          }
+        },
+        "required": ["post_id", "analysis"],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": ["results"],
+  "additionalProperties": false
+}

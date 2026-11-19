@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "covered_post_ids",
+    "themes",
+    "content_patterns",
+    "visual_patterns",
+    "high_performance_patterns",
+    "claims",
+    "counterexamples",
+    "data_gaps"
+  ],
+  "properties": {
+    "covered_post_ids": {
+      "type": "array",
+      "items": { "type": "integer" },
+      "minItems": 1
+    },
+    "themes": {
+      "type": "array",
+      "maxItems": 8,
+      "items": { "type": "string", "maxLength": 240 }
+    },
+    "content_patterns": {
+      "type": "array",
+      "maxItems": 8,
+      "items": { "type": "string", "maxLength": 320 }
+    },
+    "visual_patterns": {
+      "type": "array",
+      "maxItems": 8,
+      "items": { "type": "string", "maxLength": 320 }
+    },
+    "high_performance_patterns": {
+      "type": "array",
+      "maxItems": 8,
+      "items": { "type": "string", "maxLength": 320 }
+    },
+    "claims": {
+      "type": "array",
+      "maxItems": 10,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["claim", "supporting_post_ids", "confidence"],
+        "properties": {
+          "claim": { "type": "string", "maxLength": 360 },
+          "supporting_post_ids": {
+            "type": "array",
+            "maxItems": 20,
+            "items": { "type": "integer" }
+          },
+          "confidence": {
+            "type": "string",
+            "enum": ["low", "medium", "high"]
+          }
+        }
+      }
+    },
+    "counterexamples": {
+      "type": "array",
+      "maxItems": 6,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["observation", "post_ids"],
+        "properties": {
+          "observation": { "type": "string", "maxLength": 320 },
+          "post_ids": {
+            "type": "array",
+            "maxItems": 12,
+            "items": { "type": "integer" }
+          }
+        }
+      }
+    },
+    "data_gaps": {
+      "type": "array",
+      "maxItems": 6,
+      "items": { "type": "string", "maxLength": 240 }
+    }
+  }
+}

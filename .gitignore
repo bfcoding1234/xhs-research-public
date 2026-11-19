@@ -1,0 +1,19 @@
+.worktrees/
+scripts/workbench/web/node_modules/
+scripts/workbench/web/src/.umi/
+scripts/workbench/web/src/.umi-production/
+
+# Local runtime and build artifacts
+scripts/workbench/web/dist/
+__pycache__/
+*.py[cod]
+.DS_Store
+.venv/
+.env
+.env.*
+*.db
+*.sqlite*
+*.log
+cookies*.json
+cookies*.txt
+outputs/
